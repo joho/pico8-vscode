@@ -52,8 +52,6 @@ This extension contributes the following settings:
 
 Best I can say is that it "works on my machine"
 
-It's not yet published to the vscode marketplace
-
 ## Release Notes
 
 ### 0.0.1
