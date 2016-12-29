@@ -1,10 +1,38 @@
 # pico8-vscode
 
-A new vscode extension for editing pico8 files.
+A new vscode extension for editing and running pico8 files.
+
+I recommend having a separate pico8 workspace for doing dev in. I keep mine at `~/Projects/pico8` and 
+it looks a bit like this
+
+```
+pico8
+├── backup
+├── bbs
+├── carts
+│   └── hello.p8
+├── cdata
+├── config.txt
+├── cstore
+├── log.txt
+└── sdl_controllers.txt
+```
+
+This then allows me to open the workspace from the command line like
+
+```sh
+joho6[19:22:03]:~/Projects/pico8
+👻  code .
+```
+
+The benefit of this is that any edits and saves you make within pico8 (for example doing graphics or sound)
+will be written back into the workspace where you would expect it, rather than into the default home
+which is likely to be far, far away from the warm embrace of source control
 
 ## Features
 
 * Syntax highlighting for *.p8 files
+* If used in workspace mode will set the pico8 home to your workspace
 * CMD+R to open automatically run the .p8 you're editing in pico8
 * A humane licence (no twitter egg anti-sjw MIT variant here)
 
@@ -20,13 +48,15 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-This thing barely works and only on OSX right now
+Best I can say is that it "works on my machine"
+
+It's not yet published to the vscode marketplace
 
 ## Release Notes
 
 ### 0.0.1
 
-Initial release of ...
+Initial release of pico8-vscode
 
 ## License
 
