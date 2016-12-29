@@ -2,7 +2,7 @@
 
 A new vscode extension for editing and running pico8 files.
 
-![Example of running a pico8 workspace](http://d.pr/i/7whb+)
+![Example of running a pico8 workspace](https://cloud.githubusercontent.com/assets/4092/21540200/d5ac50e8-ce01-11e6-8aad-6c0b78751053.gif)
 
 I recommend having a separate pico8 workspace for doing dev in. I keep mine at `~/Projects/pico8` and
 it looks a bit like this
