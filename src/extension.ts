@@ -18,6 +18,8 @@ export function activate(context: vscode.ExtensionContext) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
+    let p8Config = vscode.workspace.getConfiguration('pico8');
+
     let disposable = vscode.commands.registerTextEditorCommand('pico8.run', (textEditor: vscode.TextEditor) => {
         // The code you place here will be executed every time your command is executed
 
@@ -26,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         let fileName = textEditor.document.fileName;
         
-        cp.execFile("/applications/PICO-8.app/Contents/MacOS/pico8", ["-windowed", "1", "-run", fileName], { env: process.env }, (err, stdout, stderr) => {
+        cp.execFile(p8Config['executablePath'], ["-windowed", "1", "-run", fileName], { env: process.env }, (err, stdout, stderr) => {
             if (err) {
                 console.log(err);
             }

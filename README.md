@@ -14,9 +14,9 @@ You need to have pico8.
 
 ## Extension Settings
 
-This extension will contribute the following settings:
+This extension contributes the following settings:
 
-* `pico8.executablePath`: path to where your pico8 actually is (hardcoded for now)
+* `pico8.executablePath`: path to where your pico8 actually is (default is `/Applications/PICO-8.app/Contents/MacOS/pico8`)
 
 ## Known Issues
 

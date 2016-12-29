@@ -33,7 +33,18 @@
         }],
         "keybindings": [
             { "key": "cmd+r", "command": "pico8.run" }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Pico-8 Configuration",
+            "properties": {
+                "pico8.executablePath": {
+                    "type": "string",
+                    "default": "/Applications/PICO-8.app/Contents/MacOS/pico8",
+                    "description": "Path to the pico8 cli (ie /Applications/PICO-8.app/Contents/MacOS/pico8 on MacOS, or C:\\WHO_KNOWS\\PICO8.EXE on windows)"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
