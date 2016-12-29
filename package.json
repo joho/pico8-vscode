@@ -3,7 +3,16 @@
     "displayName": "pico8-vscode",
     "description": "Do all the pico8 things in vscode",
     "version": "0.0.1",
-    "publisher": "joho",
+    "author": {
+        "name": "John Barton"
+    },
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/joho/pico8-vscode.git"
+    },
+    "icon": "images/pico8.png",
+    "publisher": "johob",
     "engines": {
         "vscode": "^1.5.0"
     },
