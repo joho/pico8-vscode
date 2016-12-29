@@ -20,7 +20,7 @@
             "extensions": [
                 ".p8"
             ],
-            "configuration": "./language-configuration.json"
+            "configuration": "./syntaxes/language-configuration.json"
         }],
         "grammars": [{
 			"language": "pico8",
