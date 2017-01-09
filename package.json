@@ -1,71 +1,86 @@
 {
-    "name": "pico8-vscode",
-    "displayName": "pico8-vscode",
-    "description": "Do all the pico8 things in vscode",
-    "version": "0.0.1",
-    "author": {
-        "name": "John Barton"
-    },
-    "private": true,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/joho/pico8-vscode.git"
-    },
-    "icon": "images/pico8.png",
-    "publisher": "johob",
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onLanguage:pico8"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "languages": [{
-            "id": "pico8",
-            "extensions": [
-                ".p8"
-            ],
-            "configuration": "./syntaxes/language-configuration.json"
-        }],
-        "grammars": [{
-			"language": "pico8",
-			"scopeName": "source.p8",
-			"path": "./syntaxes/pico8.json"
-		}],
-        "commands": [{
-            "command": "pico8.run",
-            "title": "Run a pico8 file"
-        }],
-        "keybindings": [
-            { "key": "cmd+r", "command": "pico8.run" }
+  "name": "pico8-vscode",
+  "displayName": "pico8-vscode",
+  "description": "Do all the pico8 things in vscode",
+  "version": "0.0.1",
+  "author": {
+    "name": "John Barton"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joho/pico8-vscode.git"
+  },
+  "icon": "images/pico8.png",
+  "publisher": "johob",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:pico8",
+    "onCommand:pico8.newCart"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "languages": [
+      {
+        "id": "pico8",
+        "extensions": [
+          ".p8"
         ],
-        "configuration": {
-            "type": "object",
-            "title": "Pico-8 Configuration",
-            "properties": {
-                "pico8.executablePath": {
-                    "type": "string",
-                    "default": "/Applications/PICO-8.app/Contents/MacOS/pico8",
-                    "description": "Path to the pico8 cli (ie /Applications/PICO-8.app/Contents/MacOS/pico8 on MacOS, or C:\\WHO_KNOWS\\PICO8.EXE on windows)"
-                }
-            }
+        "configuration": "./syntaxes/language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pico8",
+        "scopeName": "source.p8",
+        "path": "./syntaxes/pico8.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "pico8.run",
+        "title": "Run a pico8 file"
+      },
+      {
+        "command": "pico8.newCart",
+        "title": "Create a new pico8 file"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "cmd+r",
+        "command": "pico8.run"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Pico-8 Configuration",
+      "properties": {
+        "pico8.executablePath": {
+          "type": "string",
+          "default": "/Applications/PICO-8.app/Contents/MacOS/pico8",
+          "description": "Path to the pico8 cli (ie /Applications/PICO-8.app/Contents/MacOS/pico8 on MacOS, or C:\\WHO_KNOWS\\PICO8.EXE on windows)"
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
-        "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+      }
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "mocha": "^2.3.3",
+    "q": "^1.4.1",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  }
 }
