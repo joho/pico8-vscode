@@ -53,7 +53,13 @@
                     "description": "Path to the pico8 cli (ie /Applications/PICO-8.app/Contents/MacOS/pico8 on MacOS, or C:\\WHO_KNOWS\\PICO8.EXE on windows)"
                 }
             }
-        }
+        },
+		"snippets": [
+			{
+				"language": "pico8",
+				"path": "./snippets/pico8.json"
+			}
+		]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
